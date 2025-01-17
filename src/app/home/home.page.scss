@@ -1,0 +1,38 @@
+/* Logo image style */
+.logo {
+  width: 75%;
+  max-width: 256px;
+  margin: 0 auto; /* Centers the logo horizontally */
+  display: block;
+  object-fit: contain;
+  animation: bounce-in 1.2s ease-out forwards; /* Bounce-in animation for the logo */
+}
+
+/* Fade-in animation for text */
+.fade-in-text {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards; /* Animation to fade in text */
+  animation-delay: 0.5s;
+}
+
+/* Slide-in animation for card */
+.slide-in-card {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slide-in 1s ease-out forwards; /* Animation to slide in the card */
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.5); /* Starts at half size */
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1); /* Overshoots slightly */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1); /* Ends at normal size */
+  }
+}

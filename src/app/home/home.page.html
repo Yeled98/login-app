@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <app-header title="Login App"></app-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10" offset="1" class="ion-text-center">
+        <h2 class="fade-in-text">
+          Bienvenido a la aplicación de demostración para
+        </h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <img
+          src="assets/imgs/logo-terra.webp"
+          alt="Logo de Terra Energy"
+          class="logo bounce-in"
+        />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" sizeMd="6" offsetMd="3">
+        <ion-card class="slide-in-card">
+          <ion-card-content>
+            Esta es una ruta pública, por lo que no es necesario iniciar sesión.
+          </ion-card-content>
+          <ion-button fill="clear" expand="full" routerLink="/login">
+            Iniciar sesión
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

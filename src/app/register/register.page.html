@@ -1,0 +1,84 @@
+<ion-content [fullscreen]="true">
+  <app-header title="Regístrate"></app-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <img
+          src="assets/imgs/logo-terra.webp"
+          alt="Logo de Terra Energy"
+          class="forms-logo slide-in-logo"
+        />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" sizeMd="6" offsetMd="3">
+        <ion-card class="fade-in-card">
+          <ion-card-header>
+            <ion-card-title class="ion-text-center">
+              ¡Regístrate para comenzar!
+            </ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+              <!-- Name field -->
+              <ion-input
+                type="text"
+                fill="outline"
+                label="Nombre"
+                labelPlacement="floating"
+                formControlName="name"
+                autocomplete="name"
+                [errorText]="getNameErrorText()"
+                required
+              ></ion-input>
+
+              <!-- Email field -->
+              <ion-input
+                type="email"
+                fill="outline"
+                label="Email"
+                labelPlacement="floating"
+                formControlName="email"
+                inputmode="email"
+                autocomplete="email"
+                [errorText]="getEmailErrorText()"
+                required
+              ></ion-input>
+
+              <!-- Password field -->
+              <ion-input
+                type="password"
+                fill="outline"
+                label="Contraseña"
+                labelPlacement="floating"
+                formControlName="password"
+                [errorText]="getPasswordErrorText()"
+                required
+              >
+                <ion-input-password-toggle
+                  slot="end"
+                ></ion-input-password-toggle>
+              </ion-input>
+
+              <ion-button
+                expand="full"
+                type="submit"
+                [disabled]="registerForm.invalid"
+              >
+                Registarse
+              </ion-button>
+            </form>
+
+            <p class="ion-text-center small-text">
+              ¿Ya tienes una cuenta?
+              <a class="link" routerLink="/login"> Inicia sesión aquí </a>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

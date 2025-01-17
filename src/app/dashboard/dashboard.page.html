@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <app-header title="Dashboard"></app-header>
+
+  <ion-grid>
+    <ion-row class="ion-margin-top">
+      @if (user) {
+      <ion-col size="12" sizeMd="6" offsetMd="3">
+        <ion-avatar>
+          <img
+            alt="Avatar de usuario"
+            src="https://ionicframework.com/docs/img/demos/avatar.svg"
+          />
+        </ion-avatar>
+
+        <ion-card mode="ios">
+          <ion-card-header>
+            <ion-card-title class="ion-text-center">
+              <h1>{{ user.name }}</h1>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="warning" class="ion-text-center">
+              <h2>¡Bienvenido a la aplicación de demostración!</h2>
+            </ion-text>
+            <h3>
+              Esta es una ruta protegida, solo puedes acceder si has iniciado
+              sesión.
+            </h3>
+          </ion-card-content>
+          <ion-button expand="full" color="secondary" (click)="onLogout()">
+            Cerrar sesión
+          </ion-button>
+        </ion-card>
+      </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
+</ion-content>

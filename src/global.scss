@@ -1,0 +1,105 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Add border to ion-card elements */
+ion-card {
+  border-bottom: 1px solid var(--ion-color-dark-shade);
+  border-right: 1px solid var(--ion-color-dark-shade);
+}
+
+/* Card fade-in animation */
+.fade-in-card {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+/* Logo styles */
+.forms-logo {
+  width: 70%;
+  max-width: 220px;
+  margin: 20px auto;
+  display: block;
+  object-fit: contain;
+  animation: slide-in 1s ease-out forwards;
+}
+
+/* Logo animation */
+.slide-in-logo {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+/* Link style */
+.link {
+  color: var(--ion-color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Small text style */
+.small-text {
+  font-size: 0.9rem;
+  color: var(--ion-color-medium);
+}
+
+/* Keyframe animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Keyframe animations */
+@keyframes slide-in {
+  from {
+    transform: translateY(-30px); /* Starts 30px above its normal position */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* Ends at its normal position */
+    opacity: 1;
+  }
+}

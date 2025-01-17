@@ -1,0 +1,53 @@
+/* Avatar style  */
+ion-avatar {
+  width: 128px;
+  height: 128px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  filter: drop-shadow(0 0 1rem var(--ion-color-dark-shade));
+}
+
+ion-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* Card style */
+ion-card {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--ion-color-light-shade) 30%,
+    var(--ion-color-light-tint) 100%
+  );
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.2);
+  animation: fade-in 0.8s ease-in-out;
+}
+
+ion-card-title h1 {
+  font-size: 1.8rem;
+  color: var(--ion-color-dark);
+  text-align: center;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0.5rem 0;
+}
+
+ion-card-content h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ion-color-warning);
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+ion-card-content h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ion-color-dark);
+  margin-top: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
